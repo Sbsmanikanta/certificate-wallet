@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Vault | Storage</title>
+  <link rel="stylesheet" href="certificates.css">
+</head>
+<body>
+  <main class="documents-page">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Personal Document Storage</p>
+        <h1><span id="documentOwner">User</span>'s Document Vault</h1>
+        <p class="subtitle">Upload and manage files like marksheets, Aadhaar cards, ration cards, participation certificates, and other important records.</p>
+      </div>
+      <div class="header-actions">
+        <a class="secondary-link" href="Dashboard.html">Back to Dashboard</a>
+        <button type="button" data-action="logout">Logout</button>
+      </div>
+    </header>
+
+    <section class="documents-layout">
+      <article class="form-panel">
+        <h2>Upload New Document</h2>
+        <form id="documentForm" class="document-form">
+          <label for="documentTitle">Document Title</label>
+          <input type="text" id="documentTitle" name="documentTitle" placeholder="Example: 10th Marksheet" required>
+
+          <label for="documentType">Document Type</label>
+          <input type="text" id="documentType" name="documentType" list="documentTypes" placeholder="Example: Aadhaar Card" required>
+          <datalist id="documentTypes">
+            <option value="Marksheet"></option>
+            <option value="Marklist"></option>
+            <option value="Aadhaar Card"></option>
+            <option value="Ration Card"></option>
+            <option value="Participation Certificate"></option>
+            <option value="Certificate"></option>
+            <option value="PAN Card"></option>
+            <option value="Resume"></option>
+          </datalist>
+
+          <label for="documentFile">Select File</label>
+          <input type="file" id="documentFile" name="documentFile" accept=".pdf,image/*" required>
+
+          <p class="helper-text">For this browser-based version, keep each uploaded file under 2 MB.</p>
+          <button type="submit">Store Document</button>
+          <p id="documentMessage" class="form-message"></p>
+        </form>
+      </article>
+
+      <article class="list-panel">
+        <div class="list-panel__header">
+          <div>
+            <h2>Stored Documents</h2>
+            <p><span id="documentCount">0</span> documents found</p>
+          </div>
+          <div class="list-tools">
+            <input type="search" id="searchDocuments" placeholder="Search by title, type, file name...">
+            <select id="filterDocumentType" aria-label="Filter by document type">
+              <option value="">All Types</option>
+              <option value="Marksheet">Marksheet</option>
+              <option value="Marklist">Marklist</option>
+              <option value="Aadhaar Card">Aadhaar Card</option>
+              <option value="Ration Card">Ration Card</option>
+              <option value="Participation Certificate">Participation Certificate</option>
+              <option value="Certificate">Certificate</option>
+              <option value="PAN Card">PAN Card</option>
+              <option value="Resume">Resume</option>
+            </select>
+            <select id="sortDocuments" aria-label="Sort documents">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="title-asc">Title A-Z</option>
+              <option value="type-asc">Type A-Z</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="documentList" class="document-list"></div>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

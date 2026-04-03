@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Vault | Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="auth-page">
+    <section class="auth-card">
+      <div class="auth-visual" aria-hidden="true">
+        <div class="visual-orb visual-orb--large"></div>
+        <div class="visual-orb visual-orb--small"></div>
+        <div class="visual-sheet"></div>
+        <div class="visual-badge">Safe Access</div>
+      </div>
+
+      <div class="auth-content">
+        <p class="auth-switch">
+          Don't have an account?
+          <a href="Signup.html">Create one</a>
+        </p>
+
+        <div class="auth-copy">
+          <p class="eyebrow">Document Vault</p>
+          <h1>Login to your secure document space</h1>
+          <p class="subtitle">Open your stored files, certificates, and IDs with a fresh new interface built for quick access.</p>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email" required>
+
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required>
+
+          <button type="submit">Login</button>
+          <p id="loginMessage" class="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "document-vault",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Document Vault frontend and backend",
+  "main": "DocumentVaultServer.java",
+  "scripts": {
+    "start": "start start-server.bat",
+    "smoke:test": "node smoke-test.js"
+  }
+}

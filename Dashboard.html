@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Vault | Dashboard</title>
+  <link rel="stylesheet" href="Dashboard.css">
+</head>
+<body>
+  <main class="dashboard-page">
+    <header class="dashboard-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Dashboard Overview</p>
+        <h1>Hello, <span id="welcomeName">User</span></h1>
+        <p class="subtitle">Manage your saved documents from one place and reach your important files faster.</p>
+        <div class="hero-note">
+          <span class="hero-note__label">Your workspace</span>
+          <span class="hero-note__text">Check recent files, review totals, and move into your document area in one click.</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a class="primary-link" href="Certificates.html">View My Documents</a>
+        <button type="button" data-action="logout">Logout</button>
+      </div>
+    </header>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <p class="stat-label">Total Documents</p>
+        <h2 id="totalDocuments">0</h2>
+        <span class="stat-footnote">All files currently stored</span>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Identity Documents</p>
+        <h2 id="identityDocuments">0</h2>
+        <span class="stat-footnote">Cards and personal IDs</span>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Academic Records</p>
+        <h2 id="academicDocuments">0</h2>
+        <span class="stat-footnote">Certificates and marksheets</span>
+      </article>
+    </section>
+
+    <section class="dashboard-content">
+      <article class="panel panel--recent">
+        <div class="panel-heading">
+          <div>
+            <p class="panel-kicker">Recent Activity</p>
+            <h3>Recently Stored</h3>
+          </div>
+          <a href="Certificates.html">Manage all</a>
+        </div>
+        <ul id="recentDocuments" class="recent-list"></ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
